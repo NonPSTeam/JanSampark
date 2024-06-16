@@ -24,3 +24,6 @@ flutter:
       fonts:
         - asset: assets/fonts/JacquesFrancois-Regular.ttf
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/
