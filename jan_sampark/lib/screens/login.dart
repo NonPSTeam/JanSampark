@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jan_sampark/screens/register.dart';
-
+import 'package:jan_sampark/screens/home.dart'; 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
 
@@ -82,7 +82,12 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      // Handle login logic
+                      // Here, you would typically make an API call to authenticate the user
+                      // For now, we'll just navigate to the HomePage
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
                     }
                   },
                   child: const Text('Login'),

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ContactPage extends StatelessWidget {
+class GPostPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Contact Page'),
+        title: Text('GPost Page'),
       ),
       body: Center(
         child: Text(
-          'Contact Page',
+          'GPost Page',
           style: TextStyle(fontSize: 24),
         ),
       ),
