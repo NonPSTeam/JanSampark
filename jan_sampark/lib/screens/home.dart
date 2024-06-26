@@ -10,13 +10,43 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 2; 
+  int _selectedIndex = 2;
   final List<Widget> _pages = [
     ContactPage(),
     CommunitiesPage(),
     HomePage(),
     GPostPage(),
     ProfilePage(),
+  ];
+
+  final List<Map<String, dynamic>> _grievances = [
+    {
+      'title': 'Water logging issues in several areas after heavy rains.',
+      'location': 'Hyderabad, Telangana',
+      'description':
+          'Several areas in Hyderabad have been experiencing severe water logging after the recent heavy rains. This has caused major inconvenience to residents, leading to traffic jams and difficulties in commuting. Immediate action is required to improve drainage systems in these areas to prevent further issues.',
+      'comments': ['This needs urgent attention!', 'I faced the same issue today.'],
+      'upvotes': 0,
+      'downvotes': 0,
+    },
+    {
+      'title': 'Law and order situation deteriorating in certain neighborhoods.',
+      'location': 'Hyderabad, Telangana',
+      'description':
+          'Residents in certain neighborhoods of Hyderabad have reported a noticeable increase in criminal activities, including theft and vandalism. The community is feeling unsafe and is urging local authorities to increase police patrolling and take necessary measures to ensure safety.',
+      'comments': ['We need more police presence.', 'Something must be done about this.'],
+      'upvotes': 0,
+      'downvotes': 0,
+    },
+    {
+      'title': 'Fallen trees blocking roads and causing inconvenience.',
+      'location': 'Hyderabad, Telangana',
+      'description':
+          'After a recent storm, several trees have fallen, blocking main roads and causing significant inconvenience to commuters. The debris has also damaged some properties and vehicles. It is crucial that the local authorities clear the fallen trees and ensure the roads are accessible again.',
+      'comments': ['This is causing major traffic delays.', 'We need quick action on this.'],
+      'upvotes': 0,
+      'downvotes': 0,
+    },
   ];
 
   void _onItemTapped(int index) {
@@ -86,16 +116,18 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 20),
             Center(
               child: Container(
-                width:500,
-                height:200,
+                width: 500,
+                height: 200,
                 padding: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                child: const Text(
-                  'GRIEVANCES',
-                  style: TextStyle(fontSize: 18),
+                child: const Center(
+                  child: Text(
+                    'GRIEVANCES',
+                    style: TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
             ),
@@ -105,50 +137,118 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(fontSize: 18),
             ),
             const SizedBox(height: 10),
-            _buildInputBox(
-              'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            ),
-            _buildInputBox(
-              'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
-            ),
-            _buildInputBox(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            ),
+            for (var grievance in _grievances) _buildGrievanceBox(grievance),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildInputBox(String text) {
+  Widget _buildGrievanceBox(Map<String, dynamic> grievance) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Container(
-        padding: const EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8.0),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => GrievanceDetailsPage(grievance: grievance),
+            ),
+          );
+        },
+        child: Container(
+          padding: const EdgeInsets.all(16.0),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                grievance['title'],
+                style: const TextStyle(fontSize: 14),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.thumb_up_alt_outlined),
+                        onPressed: () {
+                          setState(() {
+                            grievance['upvotes']++;
+                          });
+                        },
+                      ),
+                      Text(grievance['upvotes'].toString()),
+                      IconButton(
+                        icon: Icon(Icons.thumb_down_alt_outlined),
+                        onPressed: () {
+                          setState(() {
+                            grievance['downvotes']++;
+                          });
+                        },
+                      ),
+                      Text(grievance['downvotes'].toString()),
+                    ],
+                  ),
+                  const Icon(Icons.comment_outlined),
+                  const Icon(Icons.share_outlined),
+                ],
+              ),
+            ],
+          ),
         ),
+      ),
+    );
+  }
+}
+
+class GrievanceDetailsPage extends StatelessWidget {
+  final Map<String, dynamic> grievance;
+
+  GrievanceDetailsPage({required this.grievance});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Grievance Details'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              text,
-              style: const TextStyle(fontSize: 14),
+              'Title: ${grievance['title']}',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Icon(Icons.thumb_up_alt_outlined),
-                Icon(Icons.thumb_down_alt_outlined),
-                Icon(Icons.comment_outlined),
-                Icon(Icons.share_outlined),
-              ],
+            SizedBox(height: 16),
+            Text(
+              'Description: ${grievance['description']}',
+              style: TextStyle(fontSize: 16),
             ),
+            SizedBox(height: 16),
+            Text(
+              'Comments:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            ...(grievance['comments'] as List<dynamic>? ?? [])
+                .map<Widget>((comment) => Text(comment.toString()))
+                .toList(),
           ],
         ),
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: HomePage(),
+  ));
 }
