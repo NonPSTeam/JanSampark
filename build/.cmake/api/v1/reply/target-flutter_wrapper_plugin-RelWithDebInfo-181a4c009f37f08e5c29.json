@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/flutter_wrapper_plugin.lib"
+			"path" : "RelWithDebInfo/flutter_wrapper_plugin.lib"
 		}
 	],
 	"backtrace" : 1,
@@ -39,37 +39,37 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 71,
+				"line" : 73,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 84,
+				"line" : 86,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 81,
+				"line" : 83,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 80,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 75,
+				"line" : 77,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 63,
+				"line" : 65,
 				"parent" : 5
 			}
 		]
@@ -80,7 +80,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG -std:c++14"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++14"
 				}
 			],
 			"includes" : 

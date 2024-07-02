@@ -5,6 +5,7 @@ set(EPHEMERAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/ephemeral")
 
 # Configuration provided via flutter tool.
 include(${EPHEMERAL_DIR}/generated_config.cmake)
+set_flutter_generated_config()
 
 # TODO: Move the rest of this into files in ephemeral. See
 # https://github.com/flutter/flutter/issues/57146.
@@ -16,13 +17,14 @@ if (NOT DEFINED FLUTTER_TARGET_PLATFORM)
 endif()
 
 # === Flutter Library ===
-set(FLUTTER_LIBRARY "${EPHEMERAL_DIR}/flutter_windows.dll")
+function(set_flutter_variables)
+    set(FLUTTER_LIBRARY "${EPHEMERAL_DIR}/flutter_windows.dll" PARENT_SCOPE)
+    set(FLUTTER_ICU_DATA_FILE "${EPHEMERAL_DIR}/icudtl.dat" PARENT_SCOPE)
+    set(PROJECT_BUILD_DIR "${PROJECT_DIR}/build/" PARENT_SCOPE)
+    set(AOT_LIBRARY "${PROJECT_DIR}/build/windows/app.so" PARENT_SCOPE)
+endfunction()
 
-# Published to parent scope for install step.
-set(FLUTTER_LIBRARY ${FLUTTER_LIBRARY} PARENT_SCOPE)
-set(FLUTTER_ICU_DATA_FILE "${EPHEMERAL_DIR}/icudtl.dat" PARENT_SCOPE)
-set(PROJECT_BUILD_DIR "${PROJECT_DIR}/build/" PARENT_SCOPE)
-set(AOT_LIBRARY "${PROJECT_DIR}/build/windows/app.so" PARENT_SCOPE)
+set_flutter_variables()
 
 list(APPEND FLUTTER_LIBRARY_HEADERS
   "flutter_export.h"

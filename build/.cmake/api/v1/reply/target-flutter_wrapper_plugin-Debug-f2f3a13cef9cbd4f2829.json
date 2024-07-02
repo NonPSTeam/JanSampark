@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "RelWithDebInfo/flutter_wrapper_app.lib"
+			"path" : "Debug/flutter_wrapper_plugin.lib"
 		}
 	],
 	"backtrace" : 1,
@@ -39,37 +39,37 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 87,
+				"line" : 73,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 96,
+				"line" : 86,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 93,
+				"line" : 83,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 92,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 91,
+				"line" : 77,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 63,
+				"line" : 65,
 				"parent" : 5
 			}
 		]
@@ -80,7 +80,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++14"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++14"
 				}
 			],
 			"includes" : 
@@ -107,8 +107,7 @@
 			[
 				0,
 				1,
-				2,
-				3
+				2
 			]
 		}
 	],
@@ -122,9 +121,9 @@
 			"id" : "flutter_assemble::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "flutter_wrapper_app::@6890427a1f51a3e7e1df",
-	"name" : "flutter_wrapper_app",
-	"nameOnDisk" : "flutter_wrapper_app.lib",
+	"id" : "flutter_wrapper_plugin::@6890427a1f51a3e7e1df",
+	"name" : "flutter_wrapper_plugin",
+	"nameOnDisk" : "flutter_wrapper_plugin.lib",
 	"paths" : 
 	{
 		"build" : ".",
@@ -138,15 +137,14 @@
 			[
 				0,
 				1,
-				2,
-				3
+				2
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				4
+				3
 			]
 		}
 	],
@@ -170,14 +168,7 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "ephemeral/cpp_client_wrapper/flutter_engine.cc",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"isGenerated" : true,
-			"path" : "ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
+			"path" : "ephemeral/cpp_client_wrapper/plugin_registrar.cc",
 			"sourceGroupIndex" : 0
 		},
 		{
