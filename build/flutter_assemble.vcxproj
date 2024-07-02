@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{61AB6B43-265A-3A41-818A-7403ABF03592}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>flutter_assemble</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\cloned\JanSampark\build\CMakeFiles\85f258541eff706d91d9155c5f25c769\flutter_windows.dll.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.dll, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_export.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_messenger.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_plugin_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_texture_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter FLUTTER_EPHEMERAL_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\windows\flutter\ephemeral PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_TARGET=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC81NWVhZTY4NjRiMjk2ZGQ5ZjQzYjJjYzc1NzdlYzI1NmU1YzMyYThkLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\.dart_tool\package_config.json C:/Users/preet/Downloads/flutter_windows_3.22.1-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;D:\projects\cloned\JanSampark\build\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.dll, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_export.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_messenger.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_plugin_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_texture_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter FLUTTER_EPHEMERAL_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\windows\flutter\ephemeral PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_TARGET=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC81NWVhZTY4NjRiMjk2ZGQ5ZjQzYjJjYzc1NzdlYzI1NmU1YzMyYThkLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\.dart_tool\package_config.json C:/Users/preet/Downloads/flutter_windows_3.22.1-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;D:\projects\cloned\JanSampark\build\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.dll, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_export.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_messenger.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_plugin_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_texture_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter FLUTTER_EPHEMERAL_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\windows\flutter\ephemeral PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_TARGET=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC81NWVhZTY4NjRiMjk2ZGQ5ZjQzYjJjYzc1NzdlYzI1NmU1YzMyYThkLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\.dart_tool\package_config.json C:/Users/preet/Downloads/flutter_windows_3.22.1-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;D:\projects\cloned\JanSampark\build\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.dll, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_export.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_windows.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_messenger.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_plugin_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/flutter_texture_registrar.h, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_ROOT=C:\Users\preet\Downloads\flutter_windows_3.22.1-stable\flutter FLUTTER_EPHEMERAL_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\windows\flutter\ephemeral PROJECT_DIR=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark FLUTTER_TARGET=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC81NWVhZTY4NjRiMjk2ZGQ5ZjQzYjJjYzc1NzdlYzI1NmU1YzMyYThkLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=D:\projects\cloned\JanSampark\FrontEnd\jan_sampark\.dart_tool\package_config.json C:/Users/preet/Downloads/flutter_windows_3.22.1-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;D:\projects\cloned\JanSampark\build\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\cloned\JanSampark\build\CMakeFiles\b02c37ede83960fe86dc1d59d09d414e\flutter_assemble.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.dll;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_export.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_windows.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_messenger.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_plugin_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\flutter_texture_registrar.h;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter -BD:/projects/cloned/JanSampark/build --check-stamp-file D:/projects/cloned/JanSampark/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter -BD:/projects/cloned/JanSampark/build --check-stamp-file D:/projects/cloned/JanSampark/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter -BD:/projects/cloned/JanSampark/build --check-stamp-file D:/projects/cloned/JanSampark/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/projects/cloned/JanSampark/jan_sampark/FrontEnd/windows/flutter -BD:/projects/cloned/JanSampark/build --check-stamp-file D:/projects/cloned/JanSampark/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;D:\projects\cloned\JanSampark\build\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;D:\projects\cloned\JanSampark\jan_sampark\FrontEnd\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\projects\cloned\JanSampark\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\projects\cloned\JanSampark\build\CMakeFiles\flutter_assemble">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\projects\cloned\JanSampark\build\ZERO_CHECK.vcxproj">
+      <Project>{4E8EF635-4AD4-3921-A5BD-F525538C475E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Jan Sampark',
       theme: ThemeData(
         colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 50, 192, 236)),
+            ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 50, 192, 236)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Jan Sampark'),
@@ -58,15 +58,16 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFB0C3FF),
+      backgroundColor: const Color(0xFFB0C3FF),
 
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Solving grievances, strengthening communities',
               style: TextStyle(
                 fontFamily: 'Jacques Francois',
@@ -75,11 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
               textAlign: TextAlign.center,
             ),
             ElevatedButton(
-              child: Text('Get Started'),
+              child: const Text('Get Started'),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
               },
             ),

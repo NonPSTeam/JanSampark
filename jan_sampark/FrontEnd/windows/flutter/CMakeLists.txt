@@ -55,6 +55,18 @@ list(APPEND CPP_WRAPPER_SOURCES_APP
 )
 list(TRANSFORM CPP_WRAPPER_SOURCES_APP PREPEND "${WRAPPER_ROOT}/")
 
+# Define apply_standard_settings function (Placeholder)
+function(apply_standard_settings target)
+    # Add your standard settings here
+    message(STATUS "Applying standard settings to ${target}")
+    # Example standard settings
+    set_target_properties(${target} PROPERTIES
+        CXX_STANDARD 14
+        CXX_STANDARD_REQUIRED ON
+        POSITION_INDEPENDENT_CODE ON
+    )
+endfunction()
+
 # Wrapper sources needed for a plugin.
 add_library(flutter_wrapper_plugin STATIC
   ${CPP_WRAPPER_SOURCES_CORE}

@@ -1,0 +1,5 @@
+D:/projects/cloned/JanSampark/build/CMakeFiles/flutter_wrapper_plugin.dir
+D:/projects/cloned/JanSampark/build/CMakeFiles/flutter_wrapper_app.dir
+D:/projects/cloned/JanSampark/build/CMakeFiles/flutter_assemble.dir
+D:/projects/cloned/JanSampark/build/CMakeFiles/ALL_BUILD.dir
+D:/projects/cloned/JanSampark/build/CMakeFiles/ZERO_CHECK.dir
