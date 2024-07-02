@@ -1,0 +1,28 @@
+name: jan_sampark
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.3
+  cupertino_icons: ^1.0.6
+  web_socket_channel: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  fonts:
+    - family: Jacques Francois
+      fonts:
+        - asset: assets/fonts/JacquesFrancois-Regular.ttf
+  uses-material-design: true
