@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   logging: ^1.0.0
-  http: ^0.13.3
+  http: ^1.2.1
   cupertino_icons: ^1.0.6
   web_socket_channel: ^3.0.0
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/login.dart';
+import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'screens/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Jan Sampark',
       theme: ThemeData(
-        colorScheme:
-            ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 50, 192, 236)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 50, 192, 236)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Jan Sampark'),
@@ -34,10 +34,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  get http => null;
+  dynamic data;
 
   @override
-
   void initState() {
     super.initState();
     fetchData();
@@ -45,7 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   fetchData() async {
     final response = await http.get(Uri.parse('http://localhost:3000/'));
-    var data = jsonDecode(response.body); // ignore: unused_local_variable
 
     if (response.statusCode == 200) {
       setState(() {
@@ -62,7 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFB0C3FF),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -84,6 +81,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
+            if (data != null) ...[
+              const SizedBox(height: 20),
+              Text(
+                'Data: $data',
+                textAlign: TextAlign.center,
+              ),
+            ],
           ],
         ),
       ),
