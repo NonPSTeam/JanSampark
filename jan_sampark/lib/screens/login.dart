@@ -19,10 +19,11 @@ class _LoginPageState extends State<LoginPage> {
 
 
    Future<void> _login() async {
-    if (!_formKey.currentState!.validate()) {
-      return;
-    }
+  if (!_formKey.currentState!.validate()) {
+    return;
+  }
 
+  try {
     final response = await http.post(
       Uri.parse('http://10.0.2.2:5000/api/auth/login'),
       headers: {'Content-Type': 'application/json'},
@@ -30,12 +31,11 @@ class _LoginPageState extends State<LoginPage> {
         'username': _usernameController.text,
         'password': _passwordController.text,
       }),
-    );
+    ).timeout(Duration(seconds: 30));
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
       // Store the token securely (e.g., using flutter_secure_storage)
-      // For simplicity, we're just printing it here
       print('Token: ${data['token']}');
 
       Navigator.pushReplacement(
@@ -47,7 +47,13 @@ class _LoginPageState extends State<LoginPage> {
         SnackBar(content: Text('Invalid credentials')),
       );
     }
+  } catch (e) {
+    print('Error during login: $e');
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Error during login: $e')),
+    );
   }
+}
 
 
   @override

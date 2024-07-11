@@ -25,7 +25,6 @@ class _RegisterPageState extends State<RegisterPage> {
   final _retypePasswordController = TextEditingController();
 
 
-  
   Future<void> _registerUser() async {
   if (!_formKey.currentState!.validate()) {
     return;
@@ -38,22 +37,30 @@ class _RegisterPageState extends State<RegisterPage> {
     return;
   }
 
+  final Map<String, String> requestBody = {
+    'email': _emailController.text,
+    'username': _usernameController.text,
+    'password': _passwordController.text,
+    'firstName': _firstNameController.text,
+    'lastName': _lastNameController.text,
+    'aadhar': _aadhaarController.text,
+    'phone': _phoneController.text,
+    'pincode': _pincodeController.text,
+    'voterId': _voterIdController.text,
+  };
+
+  print('Request body: ${json.encode(requestBody)}');
+
   try {
+    print('Sending request to: http://10.0.2.2:5000/api/auth/register');
     final response = await http.post(
       Uri.parse('http://10.0.2.2:5000/api/auth/register'),
       headers: {'Content-Type': 'application/json'},
-      body: json.encode({
-        'email': _emailController.text,
-        'username': _usernameController.text,
-        'password': _passwordController.text,
-        'firstName': _firstNameController.text,
-        'lastName': _lastNameController.text,
-        'aadhar': _aadhaarController.text,
-        'phone': _phoneController.text,
-        'pincode': _pincodeController.text,
-        'voterId': _voterIdController.text,
-      }),
-    ).timeout(Duration(seconds: 10)); // Add a timeout
+      body: json.encode(requestBody),
+    ).timeout(Duration(seconds: 30));
+
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
 
     if (response.statusCode == 201) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -67,6 +74,7 @@ class _RegisterPageState extends State<RegisterPage> {
     }
   } catch (e) {
     print('Error during registration: $e');
+    print('Error details: ${e.toString()}');
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('Error during registration: $e')),
     );

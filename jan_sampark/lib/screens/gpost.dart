@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class GPostPage extends StatefulWidget {
   @override
@@ -12,11 +15,13 @@ class _GPostPageState extends State<GPostPage> {
   String? _selectedCategory;
   String? _selectedConcern;
   TextEditingController _grievanceController = TextEditingController();
+
   List<String> grievanceTypes = [
     'Complaint',
     'Suggestion',
     'Seeking Guidance/Info'
   ];
+
   List<String> states = [
     'Andhra Pradesh',
     'Maharashtra','Delhi',
@@ -25,6 +30,7 @@ class _GPostPageState extends State<GPostPage> {
     'West Bengal',
     'Karnataka'
   ];
+
   List<String> districts = [
     'Hyderabad',
     'Vizag',
@@ -50,6 +56,33 @@ class _GPostPageState extends State<GPostPage> {
     'School Facilities',
     'Pollution'
   ];
+
+  File? _selectedPDF;
+  List<File> _selectedImages = [];
+
+  Future<void> _pickPDF() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      type: FileType.custom,
+      allowedExtensions: ['pdf'],
+    );
+
+    if (result != null) {
+      setState(() {
+        _selectedPDF = File(result.files.single.path!);
+      });
+    }
+  }
+
+  Future<void> _pickImages() async {
+    final ImagePicker _picker = ImagePicker();
+    final List<XFile>? images = await _picker.pickMultiImage();
+
+    if (images != null) {
+      setState(() {
+        _selectedImages = images.map((image) => File(image.path)).toList();
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -174,22 +207,35 @@ class _GPostPageState extends State<GPostPage> {
               Text('Attach Your PDF File',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
               ElevatedButton.icon(
-                onPressed: () {
-                  // Handle file selection
-                },
+                onPressed: _pickPDF,
                 icon: Icon(Icons.attach_file),
                 label: Text('Attach PDF'),
               ),
+              _selectedPDF != null
+                  ? Text('Selected PDF: ${_selectedPDF!.path}')
+                  : Container(),
               SizedBox(height: 16),
               Text('Upload Images here',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
               ElevatedButton.icon(
-                onPressed: () {
-                  // Handle image selection
-                },
+                onPressed: _pickImages,
                 icon: Icon(Icons.image),
                 label: Text('Upload Images'),
               ),
+              _selectedImages.isNotEmpty
+                  ? Wrap(
+                      spacing: 8.0,
+                      runSpacing: 4.0,
+                      children: _selectedImages.map((image) {
+                        return Image.file(
+                          image,
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        );
+                      }).toList(),
+                    )
+                  : Container(),
               SizedBox(height: 16),
               Center(
                 child: ElevatedButton(
