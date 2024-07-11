@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'package:jan_sampark/screens/register.dart';
 import 'package:jan_sampark/screens/home.dart'; 
 class LoginPage extends StatefulWidget {
@@ -14,6 +16,39 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
+
+
+   Future<void> _login() async {
+    if (!_formKey.currentState!.validate()) {
+      return;
+    }
+
+    final response = await http.post(
+      Uri.parse('http://10.0.2.2:5000/api/auth/login'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({
+        'username': _usernameController.text,
+        'password': _passwordController.text,
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      // Store the token securely (e.g., using flutter_secure_storage)
+      // For simplicity, we're just printing it here
+      print('Token: ${data['token']}');
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage()),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Invalid credentials')),
+      );
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +127,10 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   child: const Text('Login'),
                 ),
+    //              ElevatedButton(
+    //   onPressed: _login,
+    //   child: const Text('Login'),
+    // ),
                 const SizedBox(height: 20),
                 const Divider(),
                 TextButton(

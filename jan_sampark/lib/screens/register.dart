@@ -1,4 +1,6 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class RegisterPage extends StatefulWidget {
   RegisterPage({super.key});
@@ -21,6 +23,55 @@ class _RegisterPageState extends State<RegisterPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   final _retypePasswordController = TextEditingController();
+
+
+  
+  Future<void> _registerUser() async {
+  if (!_formKey.currentState!.validate()) {
+    return;
+  }
+
+  if (!_acceptedTerms || !_acceptedPrivacyPolicy) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Please accept the terms and privacy policy')),
+    );
+    return;
+  }
+
+  try {
+    final response = await http.post(
+      Uri.parse('http://10.0.2.2:5000/api/auth/register'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({
+        'email': _emailController.text,
+        'username': _usernameController.text,
+        'password': _passwordController.text,
+        'firstName': _firstNameController.text,
+        'lastName': _lastNameController.text,
+        'aadhar': _aadhaarController.text,
+        'phone': _phoneController.text,
+        'pincode': _pincodeController.text,
+        'voterId': _voterIdController.text,
+      }),
+    ).timeout(Duration(seconds: 10)); // Add a timeout
+
+    if (response.statusCode == 201) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('User registered successfully')),
+      );
+      Navigator.pop(context); // Go back to login page
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to register user: ${response.body}')),
+      );
+    }
+  } catch (e) {
+    print('Error during registration: $e');
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Error during registration: $e')),
+    );
+  }
+}
 
   @override
   Widget build(BuildContext context) {
@@ -182,7 +233,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     if (_formKey.currentState!.validate() &&
                         _acceptedTerms &&
                         _acceptedPrivacyPolicy) {
-                      // Handle registration logic
+                      _registerUser();
                     } else {
                       // Show error message or handle form invalid state
                     }
