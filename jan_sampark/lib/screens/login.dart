@@ -26,14 +26,14 @@ class _LoginPageState extends State<LoginPage> {
   try {
     final response = await http
         .post(
-          Uri.parse('http://10.0.2.2:5000/api/auth/login'),
+          Uri.parse('http://192.168.222.197:5000/api/auth/login'),
           headers: {'Content-Type': 'application/json'},
           body: json.encode({
             'username': _usernameController.text,
             'password': _passwordController.text,
           }),
-        )
-        .timeout(Duration(seconds: 30));
+        );
+        // .timeout(Duration(seconds: 30));
 
     print('Response status: ${response.statusCode}');
     print('Response body: ${response.body}');
