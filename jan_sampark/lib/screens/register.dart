@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 import 'login.dart';
@@ -54,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   try {
     final response = await http.post(
-      Uri.parse('${dotenv.env['SERVER_URL']}/api/auth/register'),
+      Uri.parse('http://192.168.222.197:5000/api/auth/register'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode(requestBody),
     ).timeout(Duration(seconds: 30));
