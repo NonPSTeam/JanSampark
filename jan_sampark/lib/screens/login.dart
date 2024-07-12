@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:jan_sampark/screens/register.dart';
-import 'package:jan_sampark/screens/home.dart'; 
+import 'package:jan_sampark/screens/home.dart';
+
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
 
@@ -17,29 +18,33 @@ class _LoginPageState extends State<LoginPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
-
-   Future<void> _login() async {
+  Future<void> _login() async {
   if (!_formKey.currentState!.validate()) {
     return;
   }
 
   try {
-    final response = await http.post(
-      Uri.parse('http://10.0.2.2:5000/api/auth/login'),
-      headers: {'Content-Type': 'application/json'},
-      body: json.encode({
-        'username': _usernameController.text,
-        'password': _passwordController.text,
-      }),
-    ).timeout(Duration(seconds: 30));
+    final response = await http
+        .post(
+          Uri.parse('http://10.0.2.2:5000/api/auth/login'),
+          headers: {'Content-Type': 'application/json'},
+          body: json.encode({
+            'username': _usernameController.text,
+            'password': _passwordController.text,
+          }),
+        )
+        .timeout(Duration(seconds: 30));
+
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
-      // Store the token securely (e.g., using flutter_secure_storage)
-      print('Token: ${data['token']}');
+      final token = data['token'];
+      print('Token: $token');
 
-      Navigator.pushReplacement(
-        context,
+
+      Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => HomePage()),
       );
     } else {
@@ -54,6 +59,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
 
 
   @override
@@ -121,22 +127,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      // Here, you would typically make an API call to authenticate the user
-                      // For now, we'll just navigate to the HomePage
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
-                    }
-                  },
+                  onPressed: _login,
                   child: const Text('Login'),
                 ),
-    //              ElevatedButton(
-    //   onPressed: _login,
-    //   child: const Text('Login'),
-    // ),
                 const SizedBox(height: 20),
                 const Divider(),
                 TextButton(
@@ -176,7 +169,8 @@ class _LoginPageState extends State<LoginPage> {
         filled: true,
         isDense: true,
         fillColor: Colors.white,
-        contentPadding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
         ),

@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'login.dart';
+
 class RegisterPage extends StatefulWidget {
   RegisterPage({super.key});
 
@@ -49,37 +51,37 @@ class _RegisterPageState extends State<RegisterPage> {
     'voterId': _voterIdController.text,
   };
 
-  print('Request body: ${json.encode(requestBody)}');
-
   try {
-    print('Sending request to: http://10.0.2.2:5000/api/auth/register');
     final response = await http.post(
       Uri.parse('http://10.0.2.2:5000/api/auth/register'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode(requestBody),
     ).timeout(Duration(seconds: 30));
 
-    print('Response status: ${response.statusCode}');
-    print('Response body: ${response.body}');
-
     if (response.statusCode == 201) {
+      final data = json.decode(response.body);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('User registered successfully')),
+        SnackBar(content: Text(data['msg'])), 
       );
-      Navigator.pop(context); // Go back to login page
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+      );
     } else {
+      final data = json.decode(response.body);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to register user: ${response.body}')),
+        SnackBar(content: Text(data['msg'] ?? 'Failed to register user')),
       );
     }
   } catch (e) {
     print('Error during registration: $e');
-    print('Error details: ${e.toString()}');
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('Error during registration: $e')),
     );
   }
 }
+
 
   @override
   Widget build(BuildContext context) {
