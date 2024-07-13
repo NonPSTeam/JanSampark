@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:jan_sampark/screens/register.dart';
 import 'package:jan_sampark/screens/home.dart';
+import '../config.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -26,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
   try {
     final response = await http
         .post(
-          Uri.parse('http://192.168.222.197:5000/api/auth/login'),
+          Uri.parse('$SERVER_URL/api/auth/login'),
           headers: {'Content-Type': 'application/json'},
           body: json.encode({
             'username': _usernameController.text,
