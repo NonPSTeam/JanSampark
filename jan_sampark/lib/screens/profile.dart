@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login.dart'; 
 
 void main() {
   runApp(MaterialApp(
@@ -57,6 +58,31 @@ class ProfilePage extends StatelessWidget {
             SizedBox(height: 16),
             _buildProfileButton(context, Icons.account_box, 'Account Details',
                 AccountDetailsPage()),
+            SizedBox(height: 16),
+            Center(
+              child: Container(
+                width: 100, 
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );
+                  },
+                  child: Text('Log Out', style: TextStyle(color: Colors.grey)),
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.grey,
+                    backgroundColor: Colors.white,
+                    minimumSize: Size(double.infinity, 40),
+                    elevation: 2,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: Colors.red),
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -112,8 +138,7 @@ class EditProfilePage extends StatelessWidget {
             SizedBox(height: 16),
             _buildEditButton(context, 'Verify Email'),
             SizedBox(height: 16),
-             _buildEditButton(context, 'Username'),
-          
+            _buildEditButton(context, 'Username'),
           ],
         ),
       ),
@@ -189,28 +214,30 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   bool _isSwitched = true;
 
-  Widget _buildSettingsItem(BuildContext context, IconData icon, String label, {Widget? trailing}) {
-  return Container(
-    height: 60,
-    child: ListTile(
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 10.0),
-        child: Icon(icon, size: 20),
+  Widget _buildSettingsItem(BuildContext context, IconData icon, String label,
+      {Widget? trailing}) {
+    return Container(
+      height: 60,
+      child: ListTile(
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 10.0),
+          child: Icon(icon, size: 20),
+        ),
+        title: Text(label,
+            style: TextStyle(fontSize: 16), textAlign: TextAlign.left),
+        trailing: Padding(
+          padding: const EdgeInsets.only(right: 10.0),
+          child: trailing ?? Icon(Icons.arrow_forward_ios, size: 14),
+        ),
+        onTap: () {},
+        contentPadding: EdgeInsets.symmetric(vertical: 4.0),
+        tileColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
       ),
-      title: Text(label, style: TextStyle(fontSize: 16), textAlign: TextAlign.left),
-      trailing: Padding(
-        padding: const EdgeInsets.only(right: 10.0),
-        child: trailing ?? Icon(Icons.arrow_forward_ios, size: 14),
-      ),
-      onTap: () {},
-      contentPadding: EdgeInsets.symmetric(vertical: 4.0),
-      tileColor: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-    ),
-  );
-}
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -284,11 +311,7 @@ class AccountDetailsPage extends StatelessWidget {
             _buildAccountDetailField(context, Icons.person, 'Name'),
             _buildAccountDetailField(context, Icons.person, 'Gender'),
             _buildAccountDetailField(context, Icons.phone, 'Phone Number'),
-            _buildAccountDetailField(context, Icons.location_pin, 'Pincode'),
-            _buildAccountDetailField(
-                context, Icons.credit_card, 'Aadhar Card Number'),
-            _buildAccountDetailField(
-                context, Icons.how_to_vote, 'Voter ID Number'),
+            _buildAccountDetailField(context, Icons.qr_code, 'QR Incode'),
           ],
         ),
       ),
@@ -299,10 +322,10 @@ class AccountDetailsPage extends StatelessWidget {
       BuildContext context, IconData icon, String label) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: TextField(
+      child: TextFormField(
         decoration: InputDecoration(
-          prefixIcon: Icon(icon),
           labelText: label,
+          prefixIcon: Icon(icon),
           filled: true,
           fillColor: Colors.white,
           border: OutlineInputBorder(

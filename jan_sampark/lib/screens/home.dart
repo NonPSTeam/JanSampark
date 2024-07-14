@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
           _buildBottomNavigationBarItem(Icons.contact_page, 'Contact', 0),
           _buildBottomNavigationBarItem(Icons.group, 'Communities', 1),
           _buildBottomNavigationBarItem(Icons.home, 'Home', 2),
-          _buildBottomNavigationBarItem(Icons.post_add, 'GPost', 3),
+          _buildBottomNavigationBarItem(Icons.post_add, 'Post', 3),
           _buildBottomNavigationBarItem(Icons.person, 'Profile', 4),
         ],
       ),
