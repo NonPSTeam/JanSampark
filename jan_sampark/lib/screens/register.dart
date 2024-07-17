@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../config.dart';
+// import '../config.dart';
 import 'login.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -54,7 +54,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   try {
     final response = await http.post(
-      Uri.parse('$SERVER_URL/api/auth/register'),
+      Uri.parse('https://jansampark.onrender.com/api/auth/register'),
       headers: {'Content-Type': 'application/json'},
       body: json.encode(requestBody),
     ).timeout(Duration(seconds: 30));
