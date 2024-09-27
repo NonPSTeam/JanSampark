@@ -39,11 +39,11 @@ List<Community> getTrendingCommunities() {
   // Fetch trending communities from your app's data source
   // ... (implementation details)
   return [
-    Community("Community A", imageUrl: "https://via.placeholder.com/120"),
-    Community("Community B", imageUrl: "https://via.placeholder.com/120"),
-    Community("Community C", imageUrl: "https://via.placeholder.com/120"),
-    Community("Community D", imageUrl: "https://via.placeholder.com/120"),
-    Community("Community E", imageUrl: "https://via.placeholder.com/120"),
+    Community("Narayanguda", imageUrl: "https://via.placeholder.com/120"),
+    Community("Banjara Hills", imageUrl: "https://via.placeholder.com/120"),
+    Community("Koti", imageUrl: "https://via.placeholder.com/120"),
+    Community("Kachiguda", imageUrl: "https://via.placeholder.com/120"),
+    Community("Jubliee Hills", imageUrl: "https://via.placeholder.com/120"),
   ];
 }
 
